@@ -2,8 +2,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 class lc4 {
-   
-        
         public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
             ArrayList<Integer> al = new ArrayList<Integer>();
     
