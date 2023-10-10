@@ -1,30 +1,39 @@
+import java.util.*;
+
 public class tryout {
-    public static void main(String[] args) {
-        int[][] mat = {
-                { 7, 2, 1 },
-                { 6, 4, 2 },
-                { 6, 5, 3 },
-                { 3, 2, 1 },
-        };
+    public static int[] kthSmallestPairs(int[] arr, int k) {
+        int n = arr.length;
+        List<int[]> pairs = new ArrayList<>();
 
-        int sum = 0;
-        int k = 0;
-        for (int j = 0; j < mat[0].length && k < mat.length; j++) {
-            int maxVal = mat[0][k];
-            // Iterate over rows for each column
-            for (int i = 0; i < mat.length ; i++) {
-
-                //System.out.print(mat[i][j] + " ");
-                
-                if (mat[i][j] > maxVal) {
-                    maxVal = mat[i][j];  
-                }
-                
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                int[] pair = {arr[i], arr[j]};
+                pairs.add(pair);
             }
-            k++;
-            sum = sum+ maxVal;
-            System.out.println("");
         }
-        System.out.println(sum);
+
+        Collections.sort(pairs, (a, b) -> {
+            double divisionA = (double) a[0] / a[1];
+            double divisionB = (double) b[0] / b[1];
+            return Double.compare(divisionA, divisionB);
+        });
+
+        if (k <= pairs.size()) {
+            return pairs.get(k - 1);
+        } else {
+            return null;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 5};
+        int k = 3;
+        int[] result = kthSmallestPairs(arr, k);
+
+        if (result != null) {
+            System.out.println("Result: [" + result[0] + ", " + result[1] + "]");
+        } else {
+            System.out.println("No result found.");
+        }
     }
 }
