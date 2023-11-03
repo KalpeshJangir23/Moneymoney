@@ -1,4 +1,4 @@
-package DP.DP;
+
 
 
 
@@ -14,7 +14,7 @@ public class MinimizingCoinsUsingTabulation {
             int ans = Integer.MAX_VALUE;
             for (int i = 0; i < n; i++) {
                 if (j - a[i] < 0)
-                    continue;
+                    return 0;
 
                 int val = dp[j - a[i]];
                 if (val != Integer.MAX_VALUE)
