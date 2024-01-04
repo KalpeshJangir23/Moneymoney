@@ -8,6 +8,8 @@ public class CountingBit {
         }
         return result;
     }
+
+    // NO of ones in bits
     public static int hammingWeight(int n) {
         int res = 0;
         for (int i = 0; i < 32; i++) {
@@ -19,9 +21,10 @@ public class CountingBit {
     }
     public static void main(String[] args) {
         int n = 5;
+        System.out.println(hammingWeight(011001));
         int[] res = countBits(n);
         for (int i = 0; i < res.length; i++) {
-            System.out.print(res[i] + " ");
+            //System.out.print(res[i] + " ");
         }
     }
 }
