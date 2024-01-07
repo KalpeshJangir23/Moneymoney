@@ -1,35 +1,65 @@
 package contest;
 
-public class Q2 {
-    public static int minimumOperationsToMakeEqual(int x, int y) {
-        int count = 0;
+import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 
-        while (x != y) {
-            if (x < y) {
-                if (y % 11 == 0 && y / 11 >= x) {
-                    y /= 11;
-                } else if (y % 5 == 0 && y / 5 >= x) {
-                    y /= 5;
-                } else {
-                    y--;
+public class Q2 {
+    public static int longestConsecutiveSequence(int[] nums) {
+        if(nums == null || nums.length == 0) {
+            return 0;
+        }
+        
+        HashSet<Integer> numSet = new HashSet<>();
+        for(int num : nums) {
+            numSet.add(num);
+        }
+        
+        int longestStreak = 0;
+        int longestStart = 0;
+        
+        for(int num : numSet) {
+            if(!numSet.contains(num - 1)) {
+                int currentNum = num;
+                int currentStreak = 1;
+                
+                while(numSet.contains(currentNum + 1)) {
+                    currentNum++;
+                    currentStreak++;
                 }
-            } else {
-                if (x % 11 == 0 && x / 11 >= y) {
-                    x /= 11;
-                } else if (x % 5 == 0 && x / 5 >= y) {
-                    x /= 5;
-                } else {
-                    x--;
+                
+                if(currentStreak > longestStreak) {
+                    longestStreak = currentStreak;
+                    longestStart = num;
                 }
             }
-            count++;
         }
-        return count;
+        
+        List<Integer> longestSequence = new ArrayList<>();
+        int sum = 0;
+        for (int i = longestStart; i < longestStart + longestStreak; i++) {
+            longestSequence.add(i);
+            sum += i;
+        }
+        int ans = -1;
+        while (ans == -1) {
+            if (!numSet.contains(sum)) {
+                ans = sum;
+            }
+            else{
+                sum++;
+            }
+        }
+        
+        return ans;
     }
-
+    
     public static void main(String[] args) {
-        int x = 54;
-        int y = 2;
-        System.out.println(minimumOperationsToMakeEqual(x, y));
+       // Q2 solution = new Q2();
+        int[] nums = {3,4,5,1,12,14,13};
+        System.out.println(longestConsecutiveSequence(nums));
+        //List<Integer> longestSequence = solution.longestConsecutiveSequence(nums);
+        
+       // System.out.println("Longest consecutive sequence: " + longestSequence);
     }
 }

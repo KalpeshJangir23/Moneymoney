@@ -1,4 +1,8 @@
 package Basic;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class maiChutiyaHoon {
     public static double calculateDistance(int[][] points) {
         double totalDistance = 0.0;
@@ -24,5 +28,11 @@ public class maiChutiyaHoon {
 
         double distance = calculateDistance(pointsArray);
         System.out.println("Total distance between the points: " + distance);
+
+
+
+        List<Integer> list = new ArrayList<Integer>();
+        System.out.println(list.get(list.size() - 1));
+        
     }
 }

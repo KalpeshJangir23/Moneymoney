@@ -4,10 +4,11 @@ import java.util.*;
 public class setinjava {
     public static void main(String[] args) {
         // Creating sets
-        List<Integer> set1 = new ArrayList<>();
-        set1.add(0);
-        set1.add(1);
+        Set<Integer> set1 = new HashSet<>();
         set1.add(-1);
+        set1.add(-1);
+        set1.add(-1);
+        System.out.println(set1);
 
         List<Integer> set2 = new ArrayList<>();
         set2.add(0);
