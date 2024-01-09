@@ -24,9 +24,9 @@ public class postOrderTraversal {
         
         postOrderTrav(curr.left, postOrder);
         postOrderTrav(curr.right, postOrder);
-        if (curr.right == null && curr.left == null) {
+       
             postOrder.add(curr.data);
-        }
+        
        // postOrder.add(curr.data);
     }
 
@@ -42,6 +42,14 @@ public class postOrderTraversal {
         root.right.right = new Node(7);
         root.right.right.left = new Node(9);
         root.right.right.right = new Node(10);
+    //     1
+    //     /   \
+    //    2     3
+    //   / \   / \
+    //  4   5 6   7
+    //     /     / \
+    //    8     9   10
+     
 
         ArrayList < Integer > preOrder = new ArrayList < > ();
         postOrderTrav(root, preOrder);

@@ -25,8 +25,8 @@ class IMP_CombinationII  {
     }
 
     public static void main(String args[]) {
-        int v[]={10,1,2,7,6,1,5};
-        List < List < Integer >> comb = combinationSum2(v, 8);
-        System.out.println(comb.toString().replace(",", " "));
+        int v[]={1,2,3};
+        List < List < Integer >> comb = combinationSum2(v,4 );
+        System.out.println(comb);
     }
 }
