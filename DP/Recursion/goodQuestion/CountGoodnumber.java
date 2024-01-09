@@ -1,4 +1,4 @@
-package DP.Recursion.Baap_Question;
+package DP.Recursion.goodQuestion;
 
 public class CountGoodnumber {
     static long mod = 1000000007;

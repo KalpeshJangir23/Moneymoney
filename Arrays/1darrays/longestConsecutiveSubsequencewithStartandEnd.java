@@ -34,6 +34,19 @@ public class longestConsecutiveSubsequencewithStartandEnd {
                 }
             }
         }
+
+
+        int sum = 0;
+        for (int i = start; i <end; i++) {
+            sum = sum + i;
+        }
+        int ans = -1;
+        while (ans == -1) {
+            if (!set.contains(sum)) {
+                ans = sum;
+            }
+            sum++;
+        }
         return new int[]{start, end, longest};
     }
 

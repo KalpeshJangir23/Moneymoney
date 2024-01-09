@@ -24,7 +24,10 @@ public class postOrderTraversal {
         
         postOrderTrav(curr.left, postOrder);
         postOrderTrav(curr.right, postOrder);
-        postOrder.add(curr.data);
+        if (curr.right == null && curr.left == null) {
+            postOrder.add(curr.data);
+        }
+       // postOrder.add(curr.data);
     }
 
     public static void main(String args[]) {
