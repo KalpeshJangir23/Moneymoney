@@ -2,7 +2,10 @@ package Tree;
 
 import java.util.*;
 
-class Node {
+
+
+public class preOrderTraversal {
+  public static class Node {
     int data;
     Node left, right;
     Node(int data) {
@@ -14,8 +17,6 @@ class Node {
 
     }
 }
-
-public class preOrderTraversal {
     static void preOrderTrav(Node curr, ArrayList < Integer > preOrder) {
         if (curr == null)
             return;

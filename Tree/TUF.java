@@ -12,7 +12,7 @@ class Node {
         right = null;
     }
 }
-class TUF {
+public class TUF {
 
     static void inOrderTrav(Node curr, ArrayList < Integer > inOrder) {
         if (curr == null)
