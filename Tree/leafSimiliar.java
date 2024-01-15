@@ -3,7 +3,7 @@ package Tree;
 
 import java.util.*;
 
-class Node {
+ class Node {
     int data;
     Node left, right;
     Node(int data) {
