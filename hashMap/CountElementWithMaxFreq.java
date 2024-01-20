@@ -8,7 +8,7 @@ public class CountElementWithMaxFreq {
         {
             if (mp.containsKey(nums[i])) 
             {
-                mp.put(nums[i], mp.get(nums[i]) + 1);
+                mp.put(nums[i], mp.get(nums[i]) + 1);   
             } 
             else
             {
@@ -29,7 +29,7 @@ public class CountElementWithMaxFreq {
             }
         }
         return count;
-    }
+    } 
     public static void main(String[] args) {
         int[] nums = {1,2,2,3,1,4};
         System.out.println(maxFrequencyElements(nums));

@@ -1,0 +1,54 @@
+Knapsack with Duplicate Items
+BBT counter
+Reach a given score
+Maximum difference of zeros and ones in binary string
+Climbing Stairs
+Permutation Coefficient
+Longest Repeating Subsequence
+Pairs with specific difference 
+Longest subsequence-1 
+Coin Change
+LIS
+Longest Common Subsequence
+Word Break
+Combination Sum IV
+House Robber
+Houe Robber 2
+Decode Ways
+Unique Paths
+Jumps Game
+Knapsack Problem
+nCr
+Catalan Number
+Edit Distance
+Subset Sum 
+Gold mine
+Assembly Line Scheduling
+Maximize The Cut Segments
+Maximum sum increasing subsequence 
+Count all subsequences having product less than K
+Maximum sum increasing subsequence
+Egg dropping puzzle
+Max length chain
+Largest Square in Matrix
+Maximum Path Sum
+Minimum Number of Jumps
+Minimum removals from array to make max – min <= K
+Longest Common Substring
+Partition Equal Subset Sum
+Longest Palindromic Subsequnce
+Count Palindromic Subsequences
+Longest Palindromic Substring
+Longest Alternating Sequence
+Weighted Job Scheduling
+Coin Game
+Coin Game Winner
+Optimal Strategy for a game
+Word Wrap
+Mobile numeric keypad 
+Maximum Length of Pair Chain
+Matrix Chain Multiplication
+Maximum profit by buying and selling a share at most twice
+Optimal BST
+Largest Submatrix with sum 0
+Largest area rectangular sub-matrix with equal number of 1’s and 0’s

@@ -1,31 +1,31 @@
 package Basic;
-
+import java.util.*;
 public class trykarna {
     public static void main(String[] args) {
-        int num1 = 2;
-        int num2 = 4;
-        int num3 = 6;
-        int num4 = 8;
+        int[] nums = {0,3,4,5,2,3,4,1,4 };
+        int[] result = findGreaterIndices(nums);
 
-        if (areAllEvenOrOdd(num1, num2, num3, num4)) {
-            System.out.println("All four numbers are either even or odd.");
-        } else {
-            System.out.println("Not all four numbers are either even or odd.");
-        }
+        System.out.println("Original Array: " + Arrays.toString(nums));
+        System.out.println("Result Array:   " + Arrays.toString(result));
     }
 
-    public static boolean areAllEvenOrOdd(int... numbers) {
-        boolean allEven = true;
-        boolean allOdd = true;
+    public static int[] findGreaterIndices(int[] nums) {
+        int n = nums.length;
+        int[] result = new int[n];
 
-        for (int num : numbers) {
-            if (num % 2 == 0) {
-                allOdd = false;
-            } else {
-                allEven = false;
+        for (int i = 0; i < n; i++) {
+            int currentIndex = -1;
+
+            for (int j = i - 1; j >= 0; j--) {
+                if (nums[j] > nums[i]) {
+                    currentIndex = j;
+                    break;
+                }
             }
+
+            result[i] = currentIndex;
         }
 
-        return allEven || allOdd;
+        return result;
     }
 }
