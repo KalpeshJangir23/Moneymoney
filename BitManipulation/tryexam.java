@@ -1,13 +1,26 @@
 package BitManipulation;
 
 public class tryexam {
+    public static int sumOfDigits(int number) {
+        int sum = 0;
+
+        while (number != 0) {
+            // Extract the last digit
+            int digit = number % 10;
+
+            // Add the digit to the sum
+            sum += digit;
+
+            // Remove the last digit from the number
+            number /= 10;
+        }
+
+        return sum;
+    }
+
     public static void main(String[] args) {
-        int originalValue = 0b011101; // Binary representation of 011101
-
-        // Left shifting the original value by 1 position
-        int shiftedValue = originalValue << 1;
-
-        // Printing the shifted value in binary format
-        System.out.println("Shifted value in binary: " + Integer.toBinaryString(shiftedValue));
+        int number = 10;
+        int sum = sumOfDigits(number);
+        System.out.println("Sum of digits for " + number + ": " + sum);
     }
 }

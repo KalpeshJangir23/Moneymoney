@@ -1,4 +1,3 @@
-package CP;
 
 /**
  * A_Line_Trip

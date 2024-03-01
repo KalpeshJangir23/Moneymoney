@@ -1,4 +1,4 @@
-package CP;
+
 import java.util.*;
 
 public class A_Consecutive_Sum_Riddle {
