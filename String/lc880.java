@@ -28,6 +28,7 @@ public class lc880 {
     public static void main(String[] args) {
         String s ="le2e";
         int k = 4;
+        System.out.println(5/2);
         System.out.println(decodeAtIndex(s, k));
     }
 }

@@ -19,5 +19,8 @@ public class MultiplesFinder {
         // Example: Find multiples of 3 up to 30
         List<Integer> result = findMultiples(40, 40);
         System.out.println(result);
-    }
+
+
+        }
+    
 }
