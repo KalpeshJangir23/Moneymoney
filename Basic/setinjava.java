@@ -1,13 +1,30 @@
 package Basic;
 
-import java.util.*;
-
 public class setinjava {
     public static void main(String[] args) {
+        int[] myList = { 6, 3, 6 };
+        int givenNumber = 4   ;
 
-        String a = "kalpesh";
-        String b = a.substring(0, 4);
-        System.out.println(b);
+        int lowerBoundIndex = lowerBound(myList, givenNumber);
 
+        int c = myList[lowerBoundIndex - 1];
+        System.out.println(c);
+
+    }
+
+    private static int lowerBound(int[] array, int target) {
+        int low = 0;
+        int high = array.length;
+
+        while (low < high) {
+            int mid = (low + high) / 2;
+            if (array[mid] < target) {
+                low = mid + 1;
+            } else {
+                high = mid;
+            }
+        }
+
+        return low;
     }
 }

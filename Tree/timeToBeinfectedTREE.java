@@ -2,19 +2,20 @@ package Tree;
 
 import java.util.*;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
 
-    TreeNode(int x) {
-        val = x;
-        left = null;
-        right = null;
-    }
-}
 
 public class timeToBeinfectedTREE {
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+    
+        TreeNode(int x) {
+            val = x;
+            left = null;
+            right = null;
+        }
+    }
     Map<Integer, List<Integer>> m = new HashMap<>();
     Set<Integer> visited = new HashSet<>();
     int start;
@@ -64,19 +65,19 @@ public class timeToBeinfectedTREE {
 
     public static void main(String[] args) {
         // Example usage
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(5);
-        root.right = new TreeNode(3);
-        root.right.left = new TreeNode(4);
-        root.right.right = new TreeNode(10);
-        root.right.left.left = new TreeNode(6);
-        root.right.left.right = new TreeNode(9);
-        root.right.right.left = new TreeNode(2);
+        // TreeNode root = new TreeNode(1);
+        // root.left = new TreeNode(5);
+        // root.right = new TreeNode(3);
+        // root.right.left = new TreeNode(4);
+        // root.right.right = new TreeNode(10);
+        // root.right.left.left = new TreeNode(6);
+        // root.right.left.right = new TreeNode(9);
+        // root.right.right.left = new TreeNode(2);
 
-        timeToBeinfectedTREE solution = new timeToBeinfectedTREE();
-        int startNode = 2;
-        int result = solution.amountOfTime(root, startNode);
+        // timeToBeinfectedTREE solution = new timeToBeinfectedTREE();
+        // int startNode = 2;
+        // int result = solution.amountOfTime(root, startNode);
 
-        System.out.println("Result: " + result);
+        // System.out.println("Result: " + result);
     }
 }
