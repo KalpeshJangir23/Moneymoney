@@ -1,4 +1,4 @@
-package Arrays.StriverSheets.Part01;
+package arrays.StriverSheets.Part01;
 
 public class imageMatrix {
     public static void rotate(int[][] matrix) {
