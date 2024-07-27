@@ -1,19 +1,29 @@
-import java.util.*;
+abstract class Bank {
 
-public class lrr {
-    public static String number(Integer[] nums) {
-        Arrays.sort(nums, (a, b) -> {
-            String strA = String.valueOf(a);
-            String strB = String.valueOf(b);
-            return strA.compareTo(strB);
-        });
-       
-        System.out.println(Arrays.toString(nums));
-        return "";
-    }
+  abstract int getRateOfInterest();
+}
 
-    public static void main(String[] args) {
-        Integer[] nums = { 30, 3};
-        System.out.println(number(nums));
-    }
+class SBI extends Bank {
+
+  int getRateOfInterest() {
+    return 7;
+  }
+}
+
+class PNB extends Bank {
+
+  int getRateOfInterest() {
+    return 8;
+  }
+}
+
+class TestBank {
+
+  public static void main(String args[]) {
+    Bank b;
+    b = new SBI();
+    System.out.println("Rate of Interest is: " + b.getRateOfInterest() + " %");
+    b = new PNB();
+    System.out.println("Rate of Interest is: " + b.getRateOfInterest() + " %");
+  }
 }
