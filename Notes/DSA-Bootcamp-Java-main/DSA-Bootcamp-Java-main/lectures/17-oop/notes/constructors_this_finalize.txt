@@ -39,7 +39,7 @@ new Box( ) is calling the Box( ) constructor.
 
 Inheritance and constructors in Java:
 
-In Java, constructor of base class with no argument gets automatically called in derived class constructor.
+		
 For example, output of following program given below is:
 
 Base Class Constructor Called

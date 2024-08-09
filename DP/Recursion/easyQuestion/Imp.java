@@ -12,7 +12,7 @@ public class Imp {
     }
 
     /// ! Print the number N to 1
-    static void print_number1toN(int n) {
+    static void print_number1toN(int n) {   
         if (n == 0) {
             return;
         }
